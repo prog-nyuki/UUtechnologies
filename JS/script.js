@@ -32,6 +32,16 @@ bar.animate(1.0, function () {//バーを描画する割合を指定します 1.
 // Loading //
 
 //ヘッダー部分//
+//スクロール
+if (window.matchMedia('(max-width: 768px)').matches) {
+        $('a[href*="#"]').click(function () {//全てのページ内リンクに適用させたい場合はa[href*="#"]のみでもOK
+            var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+            var pos = $(elmHash).offset().top-80;//idの上部の距離からHeaderの高さを引いた値を取得
+            $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+            return false;
+        });
+    } 
+
 // 画面遷移アニメーション
 $(window).on('load',function(){
     $("#splash_text").delay(1200).fadeOut('slow');//ロゴを1.2秒でフェードアウトする記述
@@ -195,3 +205,11 @@ function fadeAnime(){
 //-------------------------------------------/About 部分------------------------------------------------------------//
 
 
+if (window.matchMedia('(min-width: 768px)').matches) {
+    $('a[href*="#"]').click(function () {
+        var elmHash = $(this).attr('href'); //ページ内リンクのHTMLタグhrefから、リンクされているエリアidの値を取得
+        var pos = $(elmHash).offset().top-67;//idの上部の距離からHeaderの高さを引いた値を取得
+        $('body,html').animate({scrollTop: pos}, 500); //取得した位置にスクロール。500の数値が大きくなるほどゆっくりスクロール
+        return false;
+      });
+}
