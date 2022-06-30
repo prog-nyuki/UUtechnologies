@@ -27,6 +27,18 @@ body {
     padding: 0 40px;
 }
 
+.sp-only {
+    display: block;
+}
+
+.tb-only {
+    display: none;
+}
+
+.pc-only {
+    display: none;
+}
+
 /* /General */
 
 /* Loading */
@@ -343,6 +355,10 @@ canvas {
     outline: none;
 }
 
+.btnlinestretches5:hover {
+    color: rgb(0, 208, 149);
+}
+
 /*線の設定*/
 .btnlinestretches5::before {
     content: "";
@@ -424,16 +440,88 @@ canvas {
 
 /* /Home */
 
+/* -------------------------------------------------------------------------------About------------------------------------------------------------------------------- */
+.about-content {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.stripe {
+    font-size: 1.5rem;
+    position: relative;
+    padding: 0.3em;
+}
+
+.stripe:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 13%;
+    width: 100%;
+    height: 7px;
+    background: repeating-linear-gradient(-45deg, skyblue, skyblue 2px, white 2px, white 4px);
+    z-index: -1;
+}
+
+.character {
+    margin-top: 5%;
+    width: 93%;
+    outline: rgb(255, 255, 255) solid 4px;
+    outline-offset: -8px;
+    border-radius: 5%;
+}
+
+.character-text {
+    padding: 5% 3%;
+    font-size: 1rem;
+}
+
+.fadeUp {
+    animation-name: fadeUpAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeUpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fadeUpTrigger {
+    opacity: 0;
+}
+
+/* -------------------------------------------------------------------------------/About------------------------------------------------------------------------------- */
 
 
 
 
-
-/* レスポンシブ */
+/* -------------------------------------------------------------------------------レスポンシブ------------------------------------------------------------------------------- */
 /* タブレットサイズ */
 @media screen and (min-width: 768px) {
 
-    /* Header */
+    .sp-only {
+        display: none;
+    }
+
+    .tb-only {
+        display: block;
+    }
+
+    .pc-only {
+        display: none;
+    }
+
+    /* -------------------------------------------------------------------------------Header------------------------------------------------------------------------------- */
+
     .header {
         position: fixed;
         top: 0;
@@ -508,9 +596,11 @@ canvas {
         width: 100%;
     }
 
-    /* /Header */
+    /* -------------------------------------------------------------------------------/Header------------------------------------------------------------------------------- */
 
-    /* Home */
+
+    /* -------------------------------------------------------------------------------Home------------------------------------------------------------------------------- */
+
     .home:after {
         clip-path: polygon(0 0, 55% 0, 81% 100%, 0% 100%);
     }
@@ -530,7 +620,41 @@ canvas {
         font-size: 1.5rem;
     }
 
-    /* /Home */
+    /* -------------------------------------------------------------------------------/Home------------------------------------------------------------------------------- */
+
+
+
+
+    /* -------------------------------------------------------------------------------About------------------------------------------------------------------------------- */
+
+    .stripe {
+        font-size: 2.5rem;
+    }
+
+    .column {
+        display: flex;
+    }
+
+    .character {
+        margin-top: 8%;
+        margin-left: 2%;
+        width: 50%;
+    }
+
+    .character-text {
+        margin-top: 9%;
+        padding-left: 2%;
+        line-height: 1.6;
+        text-align: left;
+        font-size: 1.475rem;
+        width: 50%;
+    }
+
+    .tb-space {
+        margin-left: 3.25%;
+    }
+
+    /* -------------------------------------------------------------------------------/About------------------------------------------------------------------------------- */
 
 }
 
@@ -540,6 +664,19 @@ canvas {
 
 /* PCサイズ */
 @media screen and (min-width: 1024px) {
+
+    .sp-only {
+        display: none;
+    }
+
+    .tb-only {
+        display: none;
+    }
+
+    .pc-only {
+        display: block;
+    }
+
 
     /* Header */
     .header {
@@ -641,6 +778,42 @@ canvas {
     .btnlinestretches5 {
         font-size: 2rem;
     }
+
+
+    /* -------------------------------------------------------------------------------About------------------------------------------------------------------------------- */
+
+    .stripe {
+        font-size: 3rem;
+    }
+
+    .column {
+        display: flex;
+    }
+
+    .character {
+        margin-top: 7%;
+        margin-left: 2%;
+        width: 50%;
+    }
+
+    .character-text {
+        margin-top: 9%;
+        padding-left: 3%;
+        line-height: 1.6;
+        text-align: left;
+        font-size: 2.25rem;
+        width: 50%;
+    }
+
+    .tb-space {
+        margin-left: 0;
+    }
+
+    .pc-space {
+        margin-left: 4%;
+    }
+
+    /* -------------------------------------------------------------------------------/About------------------------------------------------------------------------------- */
 
 }
 
