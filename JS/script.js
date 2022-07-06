@@ -91,7 +91,7 @@ function init() {
     colorList = [];
     // canvas1個めの色指定
     canvasList.push(document.getElementById("waveCanvas"));
-    colorList.push(['#fffff', '#fff', '#fff']);//重ねる波の色設定
+    colorList.push(['#e6e6fa', '#f0f8ff', '#e0ffff']);//重ねる波の色設定
   // 各キャンバスの初期化
 for(var canvasIndex in canvasList) {
         var canvas = canvasList[canvasIndex];
@@ -183,7 +183,7 @@ function fadeAnime(){
 
     // ふわっ
     $('.fadeUpTrigger').each(function(){ //fadeUpTriggerというクラス名が
-        var elemPos = $(this).offset().top-50;//要素より、50px上の
+        var elemPos = $(this).offset().top-10;//要素より、50px上の
         var scroll = $(window).scrollTop();
         var windowHeight = $(window).height();
         if (scroll >= elemPos - windowHeight){
