@@ -781,10 +781,25 @@ canvas {
     margin: 0;
 }
 
+.mask {
+    display: block;
+    line-height: 0;
+    overflow: hidden;
+}
+
 .gallery li {
     margin-bottom: 20px;
     /*各画像下に余白をつける*/
     list-style: none;
+}
+
+.blur img {
+    filter: blur(0);
+    transition: .3s ease-in-out;
+}
+
+.blur a:hover img {
+    filter: blur(1.5px);
 }
 
 /*ギャラリー内のイメージは横幅100%にする*/
@@ -796,6 +811,136 @@ canvas {
 }
 
 /* -------------------------------------------------------------------------------/Products------------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------------Contact------------------------------------------------------------------------------- */
+.contact {
+    text-align: center;
+    padding-top: 5%;
+}
+
+/* .contact-title {
+    margin-top: 10%;
+} */
+
+.contact h3 {
+    margin-top: 10%;
+}
+
+.contact-number {
+    margin-top: 5%;
+}
+
+.contact-number span {
+    font-weight: bold;
+    font-size: 1.05rem;
+}
+
+.contact-btn {
+    margin-top: 8%;
+    margin-bottom: 10%;
+    /*影の基点とするためrelativeを指定*/
+    position: relative;
+    /*ボタンの形状*/
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    background: transparent;
+    border-radius: 25px;
+    border: solid 1px #333;
+    outline: none;
+    /*アニメーションの指定*/
+    transition: all 0.2s ease;
+}
+
+/*hoverをした後のボタンの形状*/
+.contact-btn:hover {
+    border-color: transparent;
+}
+
+/*ボタンの中のテキスト*/
+.contact-btn span {
+    position: relative;
+    z-index: 2;
+    /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+    /*テキストの形状*/
+    display: block;
+    padding: 10px 30px;
+    background: #fff;
+    border-radius: 25px;
+    color: #333 !important;
+    /*アニメーションの指定*/
+    transition: all 0.3s ease;
+}
+
+/*== 下に押し込まれる（立体が平面に） */
+
+/*影の設定*/
+.pushdown:before {
+    content: "";
+    /*絶対配置で影の位置を決める*/
+    position: absolute;
+    z-index: -1;
+    top: 4px;
+    left: 0;
+    /*影の形状*/
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    background-color: #333;
+}
+
+/*hoverの際にY軸に4pxずらす*/
+.pushdown:hover span {
+    background-color: #333;
+    color: #fff;
+    transform: translateY(4px);
+}
+
+.fixed-bg {
+    position: relative;
+    min-height: 100%;
+    height: auto;
+    /*--スクロールをさせるため 高さ指定--*/
+    background-size: cover;
+    /*--背景画像のサイズ--*/
+    background-attachment: fixed;
+    /*--背景画像の固定--*/
+    background-repeat: no-repeat;
+    /*--背景画像の繰り返し--*/
+    background-position: center center;
+    /*--背景画像の位置--*/
+    z-index: 2;
+    padding: 5em 0;
+}
+
+.contact-bg {
+    margin-top: 10%;
+    background-image: url(../Images/contact-bg.jpg);
+}
+
+.contact-filter {
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+
+/* -------------------------------------------------------------------------------/Contact------------------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------------------Footer------------------------------------------------------------------------------- */
+
+.footer {
+    background-color: rgb(80, 80, 80);
+    margin-top: 10%;
+    width: 100%;
+    height: 20vh;
+}
+
+.footer-filter {
+    height: 20vh;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+/* -------------------------------------------------------------------------------/Footer------------------------------------------------------------------------------- */
 
 
 
@@ -1039,7 +1184,32 @@ canvas {
 
     /* -------------------------------------------------------------------------------Products------------------------------------------------------------------------------- */
 
-    /* -------------------------------------------------------------------------------/Products------------------------------------------------------------------------------- */
+    /* -------------------------------------------------------------------------------Contact------------------------------------------------------------------------------- */
+    .contact h3 {
+        margin-top: 6.5%;
+        font-size: 1.5rem;
+    }
+
+    .contact-number {
+        margin-top: 3%;
+        font-size: 1.5rem;
+    }
+
+    .contact-number span {
+        font-size: 1.75rem;
+    }
+
+    .contact-btn {
+        margin-top: 6%;
+        width: 50%;
+    }
+
+    .contact-btn span {
+        font-size: 1.45rem;
+    }
+
+    /* -------------------------------------------------------------------------------/Contact------------------------------------------------------------------------------- */
+
 }
 
 /* -------------------------------------/タブレットサイズ------------------------------------- */
@@ -1297,6 +1467,33 @@ canvas {
     }
 
     /* -------------------------------------------------------------------------------/Products------------------------------------------------------------------------------- */
+
+
+    /* -------------------------------------------------------------------------------Contact------------------------------------------------------------------------------- */
+    .contact h3 {
+        margin-top: 4%;
+        font-size: 1.75rem;
+    }
+
+    .contact-number {
+        margin-top: 3%;
+        font-size: 1.5rem;
+    }
+
+    .contact-number span {
+        font-size: 1.75rem;
+    }
+
+    .contact-btn {
+        margin-top: 4%;
+        width: 25%;
+    }
+
+    .contact-btn span {
+        font-size: 1.45rem;
+    }
+
+    /* -------------------------------------------------------------------------------/Contact------------------------------------------------------------------------------- */
 
 }
 
