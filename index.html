@@ -14,7 +14,8 @@
 
         <!-- CSS -->
         <link rel="stylesheet" href="https://unpkg.com/destyle.css@1.0.5/destyle.css">
-        <link href="https://prog-nyuki.github.io/UUtechnologies/css/style.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css" />
+        <link href="css/style.css" rel="stylesheet">
 
         <!-- FONT -->
 
@@ -42,7 +43,7 @@
                             <li class="gnav-item"><a href="#home">HOME</a></li>
                             <li class="gnav-item"><a href="#about">ABOUT</a></li>
                             <li class="gnav-item"><a href="#service">SERVICE</a></li>
-                            <li class="gnav-item"><a href="#service">PRODUCTS</a></li>
+                            <li class="gnav-item"><a href="#products">PRODUCTS</a></li>
                             <li class="gnav-item"><a href="#contact">CONTACT</a></li>
                         </ul>
                     </nav>
@@ -85,7 +86,7 @@
                     <canvas id="waveCanvas"></canvas>
                 </div>
 
-                <div class="explanation max-width">
+                <!-- <div class="explanation max-width">
                     <div class="explanation-content">
                         <h2 class="fadeUpTrigger">こんな心配はありませんか？</h2>
                         <ul>
@@ -123,7 +124,7 @@
                         </ul>
                         <p class="fadeUpTrigger">以上のメリットなどがあリます！</p>
                     </div>
-                </div>
+                </div> -->
             </article>
 
             <!-------------------------------------------------------------------------- /Home -------------------------------------------------------------------------->
@@ -165,7 +166,7 @@
             <!-------------------------------------------------------------------------- Service -------------------------------------------------------------------------->
 
             <section id="service" class="service">
-                <div class="service-content">
+                <div class="service-content max-width">
                     <div class="service-title fadeUpTrigger">
                         <span class="stripe">Service</span>
                     </div>
@@ -223,6 +224,26 @@
             </section>
 
             <!-------------------------------------------------------------------------- /Service -------------------------------------------------------------------------->
+            <!-------------------------------------------------------------------------- Products -------------------------------------------------------------------------->
+            <section id="products">
+                <div class="products max-width">
+                    <div class="products-title fadeUpTrigger">
+                        <span class="stripe">Products</span>
+                    </div>
+
+                    <ul class="gallery">
+                        <li class="fadeUpTrigger"><a href="Images/株式会社KOKOPIX.jpg" data-lightbox="gallery1"
+                                data-title="株式会社KOKOPIXのホームページです"><img src="Images/サムネ_KOKOPIX.jpg"
+                                    alt="株式会社KOKOPIXのホームページ"></a></li>
+                        <li class="fadeUpTrigger"><a href="Images/Hot-eater.jpg" data-lightbox="gallery1"
+                                data-title="飲食店のホームページです"><img src="Images/サムネ_Hot-eater.jpg" alt="飲食店のホームページ"></a></li>
+                        <li class="fadeUpTrigger"><a href="Images/corporate.png" data-lightbox="gallery1"
+                                data-title="IT企業のホームページです"><img src="Images/サムネ_corporate.jpg" alt="IT企業のホームページ"></a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-------------------------------------------------------------------------- /Products -------------------------------------------------------------------------->
 
         </main>
 
@@ -233,6 +254,8 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://rawgit.com/kimmobrunfeldt/progressbar.js/master/dist/progressbar.min.js"></script>
+        <!-- Lightbox -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox.min.js"></script>
         <!--JavaScript-->
         <script src="JS/script.js"></script>
     </body>
