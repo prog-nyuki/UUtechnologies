@@ -919,6 +919,7 @@ canvas {
 .contact-bg {
     margin-top: 10%;
     background-image: url(../Images/contact-bg.jpg);
+    background-size: cover;
 }
 
 .contact-filter {
