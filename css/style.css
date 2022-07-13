@@ -734,18 +734,22 @@ canvas {
 
 .item1 {
     background-image: url(../Images/backimg1.jpg);
+    background-size: cover;
 }
 
 .item2 {
     background-image: url(../Images/backimg2.jpg);
+    background-size: cover;
     padding-bottom: -2%;
 }
 
 .item3 {
     background-image: url(../Images/backimg3.jpg);
+    background-size: cover;
 }
 
 .item4 {
+    background-size: cover;
     background-image: url(../Images/backimg4.png);
 }
 
@@ -929,17 +933,104 @@ canvas {
 /* -------------------------------------------------------------------------------Footer------------------------------------------------------------------------------- */
 
 .footer {
-    background-color: rgb(80, 80, 80);
-    margin-top: 10%;
+    background-color: rgba(200, 200, 200, 0.123);
+    /* margin-top: 10%; */
     width: 100%;
-    height: 20vh;
+    height: 5vh;
+}
+
+/*リンクの形状*/
+#page-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #202020;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 0.6rem;
+    transition: all 0.3s;
+}
+
+#page-top span {
+    width: 10px;
+    height: 10px;
+    border-top: 3px solid #fff;
+    border-right: 3px solid #fff;
+    transform: rotate(-45deg);
+}
+
+#page-top a:hover {
+    background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    z-index: 2;
+    /*はじめは非表示*/
+    opacity: 0;
+    transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(100px);
+    }
 }
 
 .footer-filter {
-    height: 20vh;
-    background-color: rgba(255, 255, 255, 0.7);
+    height: 5vh;
+    /* background-color: rgba(255, 255, 255, 0.7); */
 }
 
+.footer-content {
+    text-align: center;
+    font-size: 0.5rem;
+    padding-top: 4.5%;
+}
+
+.privacy {
+    text-align: center;
+    padding-top: 35%;
+}
+
+.privacy-title
 /* -------------------------------------------------------------------------------/Footer------------------------------------------------------------------------------- */
 
 
@@ -1209,6 +1300,18 @@ canvas {
     }
 
     /* -------------------------------------------------------------------------------/Contact------------------------------------------------------------------------------- */
+
+
+    /* -------------------------------------------------------------------------------Footer------------------------------------------------------------------------------- */
+
+    .footer-content {
+        font-size: 1rem;
+        padding-top: 2.5%;
+    }
+
+    /* -------------------------------------------------------------------------------/Footer------------------------------------------------------------------------------- */
+
+
 
 }
 
@@ -1498,6 +1601,16 @@ canvas {
     }
 
     /* -------------------------------------------------------------------------------/Contact------------------------------------------------------------------------------- */
+
+
+    /* -------------------------------------------------------------------------------Footer------------------------------------------------------------------------------- */
+
+    .footer-content {
+        font-size: 1rem;
+        padding-top: 1%;
+    }
+
+    /* -------------------------------------------------------------------------------/Footer------------------------------------------------------------------------------- */
 
 }
 
