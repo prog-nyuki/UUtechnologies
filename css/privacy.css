@@ -1,0 +1,119 @@
+li {
+    list-style: disc;
+    margin-left: 6%;
+    line-height: 1.5;
+    font-size: 0.75rem;
+}
+
+.gnav .gnav-list .gnav-item {
+    display: block;
+}
+
+.gnav-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.gnav-item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.gnav-item a {
+    position: relative;
+    font-size: 13px;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px 0;
+    transition: .3s;
+    letter-spacing: .05em;
+    color: #333;
+}
+
+.gnav-item a:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    content: "";
+    transition: .3s;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: #333;
+}
+
+.gnav-item a:hover:after {
+    width: 100%;
+}
+
+.privacy {
+    text-align: center;
+    padding-top: 30%;
+}
+
+.privacy-policy {
+    width: 90%;
+    margin: 10% auto;
+    padding: 5% 0;
+    background-color: rgb(240, 240, 240);
+}
+
+.privacy-policy-contents {
+    width: 87.5%;
+    margin: 0 auto;
+    padding: 7.5% 5%;
+    background-color: rgb(255, 255, 255);
+}
+
+.privacy-policy-item {
+    text-align: left;
+    color: rgb(80, 80, 80);
+
+}
+
+.privacy-policy-item h2 {
+    font-size: 1.1rem;
+    margin-bottom: 5%;
+    font-weight: bold;
+}
+
+.privacy-policy-item p {
+    margin-bottom: 10%;
+    font-size: 0.9rem;
+}
+
+@media screen and (min-width: 768px) {
+
+    .privacy {
+        text-align: center;
+        padding-top: 15%;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    .privacy {
+        text-align: center;
+        padding-top: 10%;
+    }
+
+    .privacy-policy {
+        margin: 5% auto;
+    }
+
+    .privacy-policy-item h2 {
+        font-size: 1.75rem;
+    }
+
+    .privacy-policy-item p {
+        font-size: 1.5rem;
+    }
+
+    li {
+        margin-left: 3%;
+        font-size: 1.5rem;
+    }
+
+}
